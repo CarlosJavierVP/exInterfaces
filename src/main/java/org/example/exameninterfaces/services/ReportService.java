@@ -21,6 +21,10 @@ public class ReportService {
     }
 
 
+    /**
+     * Metodo para generar informe y sacarlo por el webController
+     * @return
+     */
     public byte[] generarInforme() {
         try {
             List<Item> listaItems = itemRepository.findAll();
