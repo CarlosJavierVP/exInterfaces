@@ -3,20 +3,24 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
+    <link rel="stylesheet" href="/itemById.css">
 </head>
 <body>
     <h1 th:text="${titulo}"></h1>
     <section>
         <div>
             <div>
-                <h4 th:text="${item.title}"></h4>
-                <h4 th:text="${item.price}"></h4>
-                <h4 th:text="${item.category}"></h4>
+                <div>
+                    <h4 th:text="${item.title}"></h4>
+                    <h4 th:text="${item.price}"></h4>
+                    <h4 th:text="${item.category}"></h4>
+                </div>
+                <div>
+                    <h4 th:text="${item.description}"></h4>
+                    <img th:src="${item.image}" width="100" alt="imagenProductos">
+                </div>
             </div>
-            <div>
-                <h4 th:text="${item.description}"></h4>
-                <img th:src="${item.image}" width="150" alt="imagenProductos">
-            </div>
+            <div></div>
         </div>
     </section>
 
