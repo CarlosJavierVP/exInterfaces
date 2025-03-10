@@ -16,6 +16,7 @@
         <th>Precio</th>
         <th>Categoria</th>
         <th>Descripción</th>
+        <th>Imagen</th>
     </tr>
     <tr th:each="item:${items}">
         <td th:text="${item.id}"></td>
@@ -23,6 +24,7 @@
         <td th:text="${item.price}"></td>
         <td th:text="${item.category}"></td>
         <td th:text="${item.description}"></td>
+        <td> <img th:src="${item.image}" width="150" alt="imagenProductos"> </td>
     </tr>
 </table>
 
