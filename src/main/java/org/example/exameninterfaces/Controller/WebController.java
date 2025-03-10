@@ -24,6 +24,7 @@ public class WebController {
     private ReportService reportService;
 
 
+
     @GetMapping("/items/")
     public String allItems(Model model){
         var items = itemRepository.findAll();

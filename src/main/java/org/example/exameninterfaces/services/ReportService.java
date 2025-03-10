@@ -21,11 +21,14 @@ public class ReportService {
     }
 
 
+
     public byte[] generarInforme() {
         try {
             List<Item> listaItems = itemRepository.findAll();
 
-            InputStream report = getClass().getResourceAsStream("/reports/store_data.csv");
+
+            InputStream report = getClass().getResourceAsStream("/reports/store_data.csv"); // si fuera archivo jrxml se le pasaría y luego se compila
+            //
 
             JasperReport reportJasper = JasperCompileManager.compileReport(report);
 
