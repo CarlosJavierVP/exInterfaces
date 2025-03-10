@@ -24,7 +24,11 @@ public class WebController {
     private ReportService reportService;
 
 
-
+    /**
+     * A - HISTORIA DE USUARIO
+     * @param model
+     * @return
+     */
     @GetMapping("/items/")
     public String allItems(Model model){
         var items = itemRepository.findAll();
@@ -33,6 +37,12 @@ public class WebController {
         return "indexAllitems";
     }
 
+    /**
+     * B - HISTORIA DE USUARIO
+     * @param id
+     * @param model
+     * @return
+     */
     @GetMapping("/items/{id}")
     public String itemById(@PathVariable String id, Model model){
         var item = itemRepository.findById(id).get();
@@ -41,6 +51,10 @@ public class WebController {
         return "indexItemById";
     }
 
+    /**
+     * C - HISTORIA DE USUARIO
+     * @return
+     */
     @GetMapping("/items/descargar")
     public ResponseEntity<ByteArrayResource> descargarInforme(){
         byte[] informe = reportService.generarInforme();

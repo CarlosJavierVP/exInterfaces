@@ -21,14 +21,15 @@ public class ReportService {
     }
 
 
-
     public byte[] generarInforme() {
         try {
             List<Item> listaItems = itemRepository.findAll();
 
-
-            InputStream report = getClass().getResourceAsStream("/reports/store_data.csv"); // si fuera archivo jrxml se le pasaría y luego se compila
-            //
+            // si fuera archivo jrxml se le pasaría y luego se compila
+            /*
+            Me he liado, no he caido que csv era nativo de Jaspersoft pensé que era parecido a hacerlo con MongoDB
+             */
+            InputStream report = getClass().getResourceAsStream("/reports/store_data.csv");
 
             JasperReport reportJasper = JasperCompileManager.compileReport(report);
 
